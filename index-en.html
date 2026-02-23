@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindfulness - English Version</title>
+    <style>
+        /* สไตล์หน้าเว็บปกติ (Screen 1) */
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: sans-serif;
+            text-align: center;
+            background-color: white;
+        }
+
+        /* สไตล์จอดำที่จะเด้งทับ (Screen 2) */
+        #mindfulness-overlay {
+            display: none; /* ซ่อนไว้ในจังหวะแรก */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* ตัวหนังสือใหญ่พอสมควรตรงกลาง */
+        .warning-text {
+            font-size: 4rem; 
+            font-weight: bold;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-content">
+        <h1>Early Buddhism in the Digital Age</h1>
+        <p>Testing mindfulness script... please wait for 1 minute.</p>
+    </div>
+
+    <div id="mindfulness-overlay">
+        <div class="warning-text">
+            Don't get too carried away and forget the end.
+        </div>
+    </div>
+
+    <script>
+        // ตั้งเวลา ๑ นาที (60000 มิลลิวินาที)
+        const delayTime = 60000; 
+
+        setTimeout(() => {
+            // สั่งให้จอดำ (Screen 2) ปรากฏขึ้นมาทับหน้าจอเดิม
+            const overlay = document.getElementById('mindfulness-overlay');
+            overlay.style.display = 'flex';
+            
+            console.log("Mindfulness alert: Don't forget the end.");
+        }, delayTime);
+    </script>
+
+</body>
+</html>

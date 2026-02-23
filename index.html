@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เตือนสติ</title>
+    <style>
+        /* สไตล์จอดำแบบ Minimal */
+        #mindfulness-overlay {
+            display: none; /* เริ่มต้นให้ซ่อนไว้ก่อน */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black; /* จอดำ */
+            color: white;
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* ตัวหนังสือใหญ่พอสมควรตรงกลาง */
+        .warning-text {
+            font-size: 4rem; /* ขนาดใหญ่ชัดเจน */
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mindfulness-overlay">
+        <div class="warning-text">อย่าหลงเพลินจนลืมตาย</div>
+    </div>
+
+    <script>
+        // ตั้งค่าหน่วงเวลา 1 นาที (60000 มิลลิวินาที)
+        const delayTime = 60000; 
+
+        setTimeout(() => {
+            // สั่งให้จอดำแสดงขึ้นมาตรงกลางหน้าจอ
+            const overlay = document.getElementById('mindfulness-overlay');
+            overlay.style.display = 'flex';
+            
+            console.log("มรณสติทำงานแล้ว");
+        }, delayTime);
+    </script>
+
+    <div style="padding: 20px;">
+        <h2>หน้าเว็บหลัก (กำลังทดสอบระบบเตือนสติ...)</h2>
+        <p>รอสัก ๑ นาที จอดำจะปรากฏขึ้นมาเพื่อเตือนสติครับ</p>
+    </div>
+
+</body>
+</html>
